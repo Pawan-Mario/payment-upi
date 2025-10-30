@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pay Pawan Maurya</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      margin-top: 100px;
+    }
+    h1 {
+      color: #333;
+    }
+    .btn {
+      background-color: #0b57d0;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .btn:hover {
+      background-color: #094bb5;
+    }
+    p {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Pay Pawan Maurya</h1>
+    <p>Secure UPI payment — amount ₹350</p>
+    <a class="btn" id="payBtn">Pay ₹350</a>
+    <p>UPI ID: <b>mauryapawan002@okaxis</b></p>
+  </div>
+
+  <script>
+    const upiID = "mauryapawan002@okaxis";
+    const name = "Pawan Maurya";
+    const amount = "350";
+    const note = "Fee Payment";
+
+    const upiLink = `upi://pay?pa=${upiID}&pn=${encodeURIComponent(name)}&am=${amount}&cu=INR&tn=${encodeURIComponent(note)}`;
+    document.getElementById("payBtn").href = upiLink;
+  </script>
+</body>
+</html>
